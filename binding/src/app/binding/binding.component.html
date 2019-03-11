@@ -1,0 +1,65 @@
+<h2>Ways to render data in Templates </h2>
+<ul>
+    <li> Arithmetic : {{2+4}}</li>
+    <li> Class property :{{"Welcome " +name}} </li>
+    <li> Class method : {{greetUser()}}</li>
+    <li> JavaScript Properties : {{name.length}} </li>
+    <li> JavaScript Methods : {{name.toUpperCase()}} </li>
+    <li> Global js variables : {{location}} </li>
+</ul>
+
+<!-- 
+  1) Assigning expressions t ovar are not possible 
+  {{a=2+3}}
+
+  2) cannot read global javascript variables 
+  so access the js variabel and access in the template
+  {{window.location.href}}
+
+-->
+<div>
+    <h2> Dynamic property binding </h2>
+    <div>
+        Text Field with property binding
+        <div>
+            <input [disabled]="isDisabled" type="text" [id]="myId" value="katheek" />
+        </div>
+
+
+        Text Field with property binding in alternate way
+        <div>
+            <input bind-disabled="isDisabled" type="text" [id]="myId" value="katheek" />
+        </div>
+    </div>
+
+
+    <div>
+        Text Field with attribute binding or interpolation
+        <div>
+            <input disabled="true" type="text " id="{{myId}} " value="katheek " />
+        </div>
+    </div>
+
+    <button (click)="changeIsDisabled()"> Toggle </button>
+
+</div>
+
+
+
+
+<!-- 
+  
+  There are two ways to bind the values 
+  1) Interpolation 
+  2) Property Binding 
+  
+  Interpolation works good for String types but fails for boolean and other types 
+  So it is always advisable to use property binding 
+  Changing the values of isDisabled to true/false number of times, does'nt work anymore
+  although it appears to work for the first time 
+  i.e the presence of disabled alone sets the field to disabled 
+
+  Property binding uses [] to specify the attribute that is property binded 
+  the value need not have {{ }} brackets as they are not interpolated 
+  
+-->
