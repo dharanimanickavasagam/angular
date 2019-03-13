@@ -1,0 +1,38 @@
+Welcome {{name}}
+<div class="text-success"> Cool </div>
+<div class="text-danger"> Oh my God </div>
+<div class="text-special"> I am in Italy </div>
+
+
+<h4> Class Binder Example </h4>
+<ul>
+    <li> using class binding
+        <div [class]="successClass"> I am successful </div>
+    </li>
+
+
+    <li> using bind in class binding
+        <div bind-class="successClass"> I am successful too </div>
+    </li>
+
+    <li> I am both property binded and extra css class specified - I pick up class binder property
+        <div [class]="successClass" class="text-special"> What happens to me ? </div>
+    </li>
+
+    <li> I am controlled by a class variable that decides to pick up CSS
+        <div [class]="chooseCSS"><b> What happens to me ? </b></div>
+    </li>
+    <button (click)="getCSS()">Toggle</button>
+
+
+    <li> conditionally apply a single class/toggle class
+        <div [class.text-danger]="hasError"><b> What happens to me ? </b></div>
+    </li>
+    <button (click)="toggleHasError()">Toggle</button>
+
+    <!-- ngClass checks for classes that are true in the messageClasses object -->
+    <li> conditionally apply multiple class -use ngClass directive - a custom HTML attribute that angular provides
+        <div [ngClass]="messageClasses"><b> What happens to me ? </b></div>
+    </li>
+
+</ul>
