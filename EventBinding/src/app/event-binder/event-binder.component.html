@@ -1,0 +1,30 @@
+<h3> Event Binding and Interpolation</h3>
+<div id="greet">
+    Hello
+</div>
+<button style="margin-top : 10px; margin-bottom : 40px" (click)="justDisplayMessage()"> Click Me </button>
+<div> Interpolation Message : {{interpolationMessage}}</div>
+<div id="divID"> Event Binding Message : </div>
+
+
+
+<h3> $event, var of angular, passes the info about the click event
+    <br> and allows to access the properties of the DOM event </h3>
+<button style="margin-top : 10px; margin-bottom : 40px" (click)="passEventInfo($event)"> Click Me </button>
+<div> Event Message : {{eventMessage}} <br> Event Property : {{eventProperty}}</div>
+
+
+
+<h3> Handling events in the HTML template itself </h3>
+<button style="margin-top : 10px; margin-bottom : 40px" (click)="templateEvent='Event Handled in template'"> Click Me </button>
+<br> {{templateEvent}}
+
+
+
+<h3> 2 way Binding </h3>
+<div>
+    <input type="text" id="inputID" #myValue />
+    <button style="margin-top : 10px" (click)="displayMessage(myValue.value)"> Click Me </button>
+
+    <div id="divIDTwoWay"> Event Binding Two Way Message : </div>
+</div>
