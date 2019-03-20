@@ -1,0 +1,50 @@
+<h3>2 Way binding </h3>
+
+Enter name : <input [(ngModel)]="name" type="text" style="margin-bottom : 90px" /> {{name}}
+
+<h3> Structural Directives </h3>
+<h5> add or remove HTML elements</h5>
+
+<div>
+    <table>
+        <tr>
+            <td> First Name :</td>
+            <td> <input type="text" /> <button (click)="setIsEnabled()">Insert Middle Name</button>
+                <input *ngIf="isEnabled; else disabledBlock" type="text" placeholder="Middle Name" />
+
+                <!-- ng-template,is the template used for rendering HTML -->
+                <ng-template #disabledBlock>
+                    Click to set a middle name
+
+                </ng-template>
+            </td>
+        </tr>
+
+        <tr>
+            <td> Last Name :</td>
+            <td> <input type="text" /></td>
+        </tr>
+    </table>
+
+
+    <h3> if..else </h3>
+    <div *ngIf="toggleInput ; then toggleInputTrue; else toggleInputFalse">
+    </div>
+
+    <ng-template #toggleInputTrue> Hi </ng-template>
+    <ng-template #toggleInputFalse> Bye </ng-template>
+
+    <h3>switch - ngSwitch </h3>
+
+    <div [ngSwitch]="conditionExpression">
+        <div *ngSwitchCase="'yes'">yes</div>
+        <div *ngSwitchCase="'no'">no</div>
+        <div *ngSwitchCase="'nil'">nil</div>
+        <div *ngSwitchDefault>nothing with me</div>
+    </div>
+
+    <h3>ngFor - *ngFor="let item of list" </h3>
+    Iterating over array :
+    <div *ngFor="let item of colors; index as i;first as f;last as l,odd as o, even as e">
+        {{i}} {{f}} {{l}} {{o}} {{e}} {{item}} </div>
+</div>
