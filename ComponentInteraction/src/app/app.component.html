@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1> Component Interaction </h1>
+<h3> You are in the root now !</h3>
+Exporting from Root : {{exportData}} <br>
+<app-child (event)="message=$event" [exportData]="exportData" [exportName]="exportName"></app-child>
+
+<h3> Receiving message from child </h3>
+{{message}}
