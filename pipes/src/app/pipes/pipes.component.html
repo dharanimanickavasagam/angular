@@ -1,0 +1,35 @@
+String manipulations
+<ul>
+    <li> Lower case : {{stringPipe | lowercase}} </li>
+    <li> Upper Case : {{stringPipe | uppercase}} </li>
+    <li> Slice with start: {{stringPipe | slice:3}} </li>
+    <li> Slice with start and end : {{stringPipe | slice:3:8}} </li>
+    <li> Titlecase : {{stringPipe | titlecase}}</li>
+    <li> Titlecase : {{stringPipeJson | json}}</li>
+</ul>
+
+
+Number Manipulations
+<ul>
+    <li>{{numericalPipe | number :'2.3-6'}}</li>
+    <li>{{numericalPipe | number :'2.1-2'}}</li>
+    <li>{{numericalPipe | number :'2.1-3'}}</li>
+    <li>{{numericalPipe | number :'1.6'}}</li>
+</ul>
+
+Some other manipulations
+<ul>
+    <li> {{0.75|percent}}</li>
+    <li> {{0.75 | currency : 'GBP'}}</li>
+    <li> {{0.75 | currency : 'USD'}}</li>
+    <li> {{0.75 | currency : 'INR'}} </li>
+    <li> {{0.75 | currency : 'Custom Money' : 'code'}}</li>
+    <li> {{date}}</li>
+    <li> {{date | date:'short'}}</li>
+    <li> {{date | date:'shortDate'}}</li>
+    <li> {{date | date:'shortTime'}}</li>
+    <li> {{date | date:'medium'}}</li>
+    <li> {{date | date:'mediumDate'}}</li>
+    <li> {{date | date:'mediumTime'}}</li>
+
+</ul>
