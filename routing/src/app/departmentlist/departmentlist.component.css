@@ -1,0 +1,17 @@
+.list {
+    color: brown;
+    background-color: #ffffff;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.list:hover {
+    cursor: pointer;
+}
+
+.id {
+    background-color: blueviolet;
+    color: white;
+    display: inline-block;
+}

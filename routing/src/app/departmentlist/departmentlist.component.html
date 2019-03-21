@@ -1,0 +1,7 @@
+<h3> Departmental List </h3>
+<div *ngFor="let department of departments">
+
+    <div class="id" (click)="onSelect(department)">{{department.id}}</div>
+    <div class="list" (click)="onSelect(department)"> {{department.name}}</div>
+
+</div>
